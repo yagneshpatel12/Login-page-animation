@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@500&display=swap');
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Fira Sans', sans-serif;
+}
+.container{
+    background-image: linear-gradient(to left, #e52e96, #e221a2, #dd15b0, #d50dbf, #c911cf, #bc17d8, #ad1fe0, #9b27e9, #872beb, #702fed, #5433ef, #2536f0);
+    height: 100vh;
+    width: 100vw;
+}
+#changebg{
+    
+    background-Image:linear-gradient(to right, #e52e96, #e221a2, #dd15b0, #d50dbf, #c911cf, #bc17d8, #ad1fe0, #9b27e9, #872beb, #702fed, #5433ef, #2536f0);
+}
+.circle {
+    background-image: linear-gradient(to bottom, #2121e9, #7218e9, #9f0de9, #c507e7, #e510e5);
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+#circle1{
+    position: absolute;
+    right:500px;
+    top: 30px;
+
+}
+.circle1leftposi{
+    position: absolute;
+    top: 30px;
+    right: 950px;
+}
+#circle2{
+    position: absolute;
+    right:320px;
+    bottom: 70px;
+}
+
+.circle2leftposi{
+    position: absolute;
+    bottom: 70px;
+    right: 950px;
+        
+}
+.triangle{
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-left: 100px solid rgb(248, 36, 255);
+    border-bottom: 60px solid transparent;
+}
+
+.trianglesmallright{
+    width: 0;
+    height: 0;
+    border-top: 60px solid transparent;
+    border-right: 100px solid rgb(80, 77, 228);
+    border-bottom: 60px solid transparent;
+}
+.trianglesmallleftposi{
+    position: absolute;
+    bottom: 300px;
+    right: 1150px;
+}
+#trianglesmall{
+   position: absolute;
+   right: 100px;
+   bottom: 300px;
+}
+#text{
+    font-size: 2rem;
+    font-weight: 600;
+    position: absolute;
+    right: 120px;
+    top: 275px;
+    transition: all 2s;
+    color:white
+}
+.textleftposi{
+    color:white;
+    font-size: 2rem;
+    font-weight: 600;
+    position: absolute;
+    top: 275px;
+    right: 1050px;
+}
+#main{
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top: 200px;
+    left: 550px;
+    background-color: red;
+}
+.tribox{
+    position: absolute; 
+    top: 190px;
+   left: 530px;
+   height:318px;
+   width: 360px; 
+   display: inline-block;
+   transition: all 2s;
+}
+.triangle4{
+    margin-left: 15px;
+    margin-top: 10px;
+    display: inline-block;
+    width: 330px;
+    color:white;
+    filter: url('#goo');
+}
+
+.triangle4::before {
+    box-shadow: inset -10px -16px 25px rgba(255, 255, 255, 0.33);
+    content: "";
+    display: block;
+    padding-top: 86%;
+   background: currentColor;
+   clip-path: polygon(50% 0, 100% 100%, 0 100%);
+ }
+
+@keyframes circle1left{
+    0%{
+        top: 30px;
+        right: 400px;
+        transform: rotateZ(0deg);
+     }
+     40%{
+         top: 30px;
+         right: 360px;
+         transform: rotatez(30deg); 
+     }
+     100%{
+         top: 30px;
+        right: 950px;
+        transform: rotateZ(-360deg);
+     }
+ 
+}
+@keyframes circle1right{
+    0%{
+        top: 30px;
+        right: 950px;
+        transform: rotate(0deg);
+     }
+     100%{
+         top: 30px;
+        right: 500px;
+        transform: rotate(360deg);
+     }
+ 
+}
+@keyframes circle2left{
+    0%{
+        bottom: 70px;
+        right: 320px;
+        transform: rotateZ(0deg);
+
+     }
+     40%{
+        bottom: 70px;
+        right: 180px;
+        transform: rotateZ(30deg);
+     }
+     100%{
+         bottom: 70px;
+        right: 950px;
+        transform: rotateZ(-360deg);
+     }
+ 
+}
+@keyframes circle2right{
+    0%{
+        bottom: 70px;
+        right: 950px;
+        transform: rotate(0deg);
+     }
+     100%{
+         bottom: 70px;
+        right: 320px;
+        transform: rotate(0deg);
+     }
+ 
+}
+@keyframes trianglesmallleft{
+    0%{
+        bottom: 300px;
+        right: 100px;
+     transform:rotateZ(0deg);
+
+     }
+     40%{
+        bottom: 300px;
+        right: 55px;
+     transform:rotateZ(25deg);
+
+     }
+     100%{
+         bottom: 300px;
+        right: 1150px;
+        transform: rotateZ(-360deg);
+     }
+ 
+}
+@keyframes trianglesmallright{
+    0%{
+        bottom: 300px;
+        right: 1150px;
+        transform: rotate(0deg);
+     }
+     100%{
+         bottom: 300px;
+        right: 100px;
+        transform: rotate(360deg);
+     }
+ 
+}
+@keyframes textleft{
+    0%{
+        top: 275px;
+        right: 120px;
+
+     }
+     40%{
+       top: 275px;
+        right: 90px;
+
+     }
+     100%{
+         top: 275px;
+        right: 1050px;
+     }
+ 
+}
+@keyframes textright{
+    0%{
+        top: 275px;
+        right: 1050px;
+     }
+     100%{
+         top: 275px;
+        right: 120px;
+     }
+ 
+}
+@keyframes rounderleft{
+    0%{
+        transform: rotate(0deg);
+    }
+    40%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(-180deg);
+    }
+}
+@keyframes rounderright{
+    0%{
+        transform: rotate(-180deg);
+    }
+    100%{
+        transform: rotate(-0deg);
+    }
+}
+
+#input1{
+    float: left;
+   width: 30px;
+   border-top-right-radius: 0px;
+   border-bottom-right-radius: 0px;
+}
+.input2{
+  width: 200px;
+  border-top-left-radius: 0px;
+   border-bottom-left-radius: 0px;
+}
+input{
+    position: relative;
+    top: 420px;
+    left: 594px;
+    border-radius: 12px;
+    outline: none;
+    height: 35px;
+    font-size: 15px;
+    border: 1.5px solid rgb(165, 162, 162);
+    z-index: 1;
+}
+#forwadbtn{
+    position: relative;
+    top: 420px;
+    left: 567px;
+    z-index: 2;
+   color: blue;
+}
+.parahead{
+    position: absolute;
+    top: 382px;
+    z-index: 1;
+    left: 675px;
+    font-size: 20px;
+    font-weight: 600;
+}
+.tribox1{
+    transform: rotate(-180deg);
+}
+.image{
+    position: absolute;
+    background-image: url('delivery-courier.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 273px;
+    left:654px ;
+
+}
+img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+}
+@keyframes imageboxright{
+    0%{
+        top: 236px;
+        left: 820px;
+    }
+    100%{
+        top: 273px;
+        left:654px ;
+    }
+}
+@keyframes imagebox{
+    0%{
+        top: 273px;
+        left:654px ;
+    }
+    40%{
+        top: 273px;
+        left:654px ;
+        transform: rotate(20deg);
+    }
+    100%{
+        top: 236px;
+        left: 820px;
+    }
+}
+@keyframes imgright{
+    0%{
+        height: 317px;
+        width: 308px;
+    }
+    100%{
+        height: 100px;
+        width: 100px;
+    }
+}
+@keyframes img{
+    0%{
+        height: 100px;
+        width: 100px;
+    }
+    40%{
+        height: 100px;
+        width: 100px;
+    }
+    100%{
+        height: 317px;
+        width: 308px;
+    }
+}
+.imageboxposi{
+    position: absolute;
+    top: 236px;
+        left: 820px;
+}
+.imgposi{
+    height: 317px ;
+    width: 308px ;
+}
+@keyframes parahead{
+    0%{
+        top: 382px;
+        left: 675px;
+    }
+    40%{
+        top: 390px;
+        left: 679px;
+    }
+    100%{
+        top:240px;
+        left: 665px;
+    }
+}
+@keyframes paraheaddown{
+    0%{
+        top:240px;
+        left: 665px;
+    }
+    100%{
+        top: 382px;
+        left: 675px;
+    }
+}
+.paraheadposi{
+    top:240px;
+    left: 665px;
+}
+ @keyframes pininput{
+    0%{
+        top: 420px;
+        left: 594px;
+        
+    }
+    100%{
+        top: 273px;
+        left: 612px;
+        
+    }
+}
+@keyframes pininputdown{
+    0%{
+        top: 273px;
+        left: 612px;
+    }
+    100%{
+        top: 420px;
+        left: 594px;
+    }
+}
+#inputareaposi{
+    position: absolute;
+    top: 273px;
+    left: 612px;
+    border-radius: 12px;
+} 
+.setpinposi{
+    top:273px;
+    left: 612px;
+}
+.inputani{
+animation: pininputdown 2s;
+}
+.pininput{
+    animation: pininput 1s;
+    border: none;
+    border-bottom: 2px solid black;
+    background: none;
+    width: 30px;
+    border-radius: 0px;
+    text-align: center;
+    font-size: 23px;
+}
+.mainpoint{
+   
+    margin-top: 5px;
+    display: inline-block;
+    text-align: center;
+    position: absolute;
+    top: 320px;
+    left: 655px;
+    transition: all 2s;
+}
+.inputareaborder{
+    margin-top: 5px;
+    border: 2px solid rgb(172, 170, 170);
+    position: absolute;
+    border-radius: 18px;
+    width: 207px;
+    height: 55px;
+    background: none;
+    top: 266px;
+    left: 607px;
+}
+#loginbtn{
+    color: white;
+    border: none;
+    outline: none;
+    background-image: linear-gradient(to top, #e016ce, #c420d9, #a12ce3, #7436eb, #193ff2);
+    margin-bottom: 10px;
+    border-radius: 20px;
+    font-size: 20px;
+    padding: 7px;
+    padding-left: 17px;
+    padding-right: 17px;
+    font-weight: 600;
+    margin-top: 8px;
+}
+#changenum,#resendotp{
+    margin-bottom: 5px;
+    font-weight: 400;
+    cursor: pointer;
+    z-index: 10;
+}
+
